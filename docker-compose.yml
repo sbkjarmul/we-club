@@ -1,0 +1,42 @@
+version: '3.9'
+services:
+  we-db:
+    image: postgres:13
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: nest
+    networks:
+      - we-network
+
+  we-backend:
+    build:
+      dockerfile: Dockerfile
+      context: ./we-backend
+    ports:
+      - "3010:3000"
+    # env_file:
+    #   - ./we-backend/.env
+    # environment:
+    #   - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@we-db/${POSTGRES_DB}?schema=public
+    depends_on:
+      - we-db
+    networks:
+      - we-network
+    # command: ["./wait-for-it.sh", "we-db:5432", "--", "./run.sh"]
+    command: bash -c "./wait-for-it.sh -t 15 -s we-db:5432 -- ./run.sh"
+  
+  we-client:
+    build:
+      dockerfile: Dockerfile
+      context: ./we-client
+    ports:
+      - "80:80"
+    networks:
+      - we-network
+
+networks:
+  we-network:
+

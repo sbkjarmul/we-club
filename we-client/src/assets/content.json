@@ -1,0 +1,33 @@
+{
+  "pages": {},
+  "components": {
+    "lotery": {
+      "loteryHeader": "Loteria mikolajkowa",
+      "drawButton": "Losuj",
+      "logoAlt": "Logo WE",
+      "buyGiftFor": "Kupujesz prezent dla: ",
+      "rules": "Pamietaj, ze informacja o wylosowanej osobie jest widoczna tylko dla Ciebie i nalezy ja zachowac w tajemnicy!",
+      "showResult": "Pokaz",
+      "clickTohide": "(kliknij, aby ukryc)"
+    },
+    "header": {
+      "logoAlt": "Logo WE",
+      "loggedIn": "Zalogowany: ",
+      "logOut": "Wyloguj sie",
+      "logIn": "Zaloguj sie",
+      "tasks": "Zadania",
+      "home": "Glowna"
+    },
+    "login": {
+      "logIn": "Zaloguj sie"
+    },
+    "todo": {
+      "assigned": "Przypisany: ",
+      "assignToYou": "Przypnij",
+      "unassign": "Odepnij",
+      "delete": "Usun",
+      "addTodo": "Dodaj zadanie",
+      "myTasks": "Moje zadania"
+    }
+  }
+}

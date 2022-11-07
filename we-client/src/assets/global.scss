@@ -1,0 +1,65 @@
+// Font sizes
+$text-xxs: 8px;
+$text-xs: 12px;
+$text-s: 16px;
+$text-m: 24px;
+$text-l: 32px;
+$text-xl: 64px;
+$text-xxl: 92px;
+
+// Spacing
+$space-xxs: 6px;
+$space-xs: 12px;
+$space-s: 24px;
+$space-m: 48px;
+$space-l: 96px;
+$space-xl: 192px;
+
+// Colors
+$color-dark: #000000;
+$color-dark-hover: #181818;
+$color-light: #ffffff;
+$color-light-secondary: rgb(179, 179, 179);
+$color-block: rgb(42, 42, 42);
+$color-block-text: rgb(117, 116, 116);
+$color-burn-dark: rgb(130, 9, 25);
+$color-burn: rgb(191, 6, 31);
+
+$color-sbk: rgb(77, 255, 0);
+$color-krycha: rgb(217, 255, 0);
+$color-ozia: rgb(208, 0, 255);
+$color-radek: rgb(0, 242, 255);
+$color-mati: rgb(1, 255, 166);
+$color-zabek: rgb(0, 123, 255);
+$color-marcin: rgb(255, 174, 0);
+$color-rafcio: rgb(255, 0, 111);
+$color-piter: rgb(255, 106, 0);
+$color-suchy: rgb(149, 0, 255);
+$color-cichy: rgb(0, 17, 255);
+
+// Header
+$headerHeight: 100px;
+$logoHeight: 50px;
+
+// Block
+$block-radius: 25px;
+$block-shadow: 1px 6px 15px 0px rgba(10, 10, 11, 0.552);
+$block-gap: 10px;
+
+@mixin for-mobile {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin for-desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin for-not-mobile {
+  @media (min-width: 599px) {
+    @content;
+  }
+}
