@@ -179,7 +179,7 @@ const classObject = computed(() => ({
   }
 
   &.color-cichy {
-    border-color: $color-cichy;
+    color: $color-cichy;
   }
 }
 
