@@ -5,7 +5,11 @@ function logIn(user: WeMember) {
   return httpClient.post('/auth/signin', {
     email: user.email,
     password: user.password
-  });
+  }, {
+    headers: {
+      'Authorization': ''
+    }
+  },);
 }
 
 function getUserInfo() {

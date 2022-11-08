@@ -1,7 +1,9 @@
 export const initialState = {
   user: {
-    id: NaN,
+    id: null,
     firstName: '',
     lastName: '',
+    nickName: '',
+    token: ''
   }
 }

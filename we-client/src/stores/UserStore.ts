@@ -1,10 +1,8 @@
 import { WeMember } from '@/models/we-member.model'
 import router from '@/router';
 import { defineStore } from 'pinia'
-import axios from 'axios'
 import userApi from '@/network/user'
-
-const BASE_URL = import.meta.env.VITE_BASE_URL
+import { initialState } from './initialState';
 
 export const useUserStore = defineStore('UserStore', {
   state: () => ({
@@ -28,8 +26,9 @@ export const useUserStore = defineStore('UserStore', {
     logIn(user: WeMember) {
       userApi.logIn(user).then(response => {
         const { access_token: token } = response?.data
-        this.user.token = token
         localStorage.setItem('token', JSON.stringify(token))
+        this.user.token = token
+        this.getUserInfo()
         router.push('/')
         this.loginError = false
       }).catch(e => {
@@ -43,7 +42,8 @@ export const useUserStore = defineStore('UserStore', {
     getUserInfo() {
       userApi.getUserInfo()
         .then(response => {
-          this.user = { token: this.user.token, ...response.data }
+          const token = JSON.parse(String(localStorage.getItem('token')))
+          this.user = { token, ...response.data }
         })
     }
   }
