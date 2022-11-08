@@ -2,7 +2,7 @@
 import Header from '@/components/Header.vue'
 import MobileMenu from '@/components/MobileMenu.vue'
 import { onMounted, ref, watch } from 'vue';
-import { useUserStore } from '@/stores/UserStore';
+import { useUserStore } from '@/stores/userStore';
 
 const isMobileMenuOpen = ref(false)
 

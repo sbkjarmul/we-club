@@ -2,6 +2,7 @@ import { WeMember } from '@/models/we-member.model'
 import router from '@/router';
 import { defineStore } from 'pinia'
 import axios from 'axios'
+import userApi from '@/network/user'
 
 const BASE_URL = import.meta.env.VITE_BASE_URL
 
@@ -25,10 +26,7 @@ export const useUserStore = defineStore('UserStore', {
   },
   actions: {
     logIn(user: WeMember) {
-      axios.post(`${BASE_URL}/auth/signin`, {
-        email: user.email,
-        password: user.password
-      }).then(response => {
+      userApi.logIn(user).then(response => {
         const { access_token: token } = response?.data
         this.user.token = token
         localStorage.setItem('token', JSON.stringify(token))
@@ -43,14 +41,9 @@ export const useUserStore = defineStore('UserStore', {
       this.user.token = null
     },
     getUserInfo() {
-      const token = JSON.parse(String(localStorage.getItem('token')))
-      const config = {
-        headers: { Authorization: `Bearer ${token}` }
-      };
-
-      axios.get(`${BASE_URL}/users/me`, config)
+      userApi.getUserInfo()
         .then(response => {
-          this.user = { token, ...response.data }
+          this.user = { token: this.user.token, ...response.data }
         })
     }
   }

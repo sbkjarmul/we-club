@@ -1,17 +1,17 @@
 <script lang="ts" setup>
 import * as content from '@/assets/content.json'
-import { useChristmassStore } from '@/stores/ChristmassStore';
-import { useUserStore } from '@/stores/UserStore';
+import { useTodoStore } from '@/stores/todoStore';
+import { useUserStore } from '@/stores/userStore';
 import { storeToRefs } from 'pinia';
 import { computed, onMounted } from 'vue';
 const myTodosContent = content.components.todo
 
-const christmassStore = useChristmassStore()
+const todoStore = useTodoStore()
 const userStore = useUserStore()
-const { allTodos } = storeToRefs(christmassStore)
+const { allTodos } = storeToRefs(todoStore)
 const { user } = storeToRefs(userStore)
 
-const { getAllTodos } = christmassStore
+const { getAllTodos } = todoStore
 
 onMounted(() => {
   getAllTodos()
@@ -26,8 +26,6 @@ const myTodos = computed(() => (
   <div class="my-todos__wrapper">
     <h1 class="my-todos__header">{{ myTodosContent.myTasks }}</h1>
     <div class="my-todos">
-      <!-- <TodoItem v-for="todo in myTodos" :isMyTodo="true" :todo="todo" :key="todo.description">
-      </TodoItem> -->
       <p class="my-todos__task" v-for="todo in myTodos">{{ todo.description }}</p>
     </div>
   </div>

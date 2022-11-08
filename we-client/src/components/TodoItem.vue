@@ -2,7 +2,7 @@
 import * as content from '@/assets/content.json'
 import Block from '@/components/Block.vue'
 import { NickNames } from '@/enum/nick-name.enum';
-import { useUserStore } from '@/stores/UserStore';
+import { useUserStore } from '@/stores/userStore';
 import { storeToRefs } from 'pinia';
 import { computed } from 'vue';
 

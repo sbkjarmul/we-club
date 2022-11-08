@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import * as content from '@/assets/content.json'
-import { useChristmassStore } from '@/stores/ChristmassStore';
+import { useLoteryStore } from '@/stores/loteryStore';
 import { storeToRefs } from 'pinia';
 import { onMounted, Ref, ref } from 'vue';
 
@@ -8,9 +8,9 @@ const loteryContent = content.components.lotery
 
 const isLoteryResultShown: Ref<boolean> = ref(false)
 
-const christmassStore = useChristmassStore()
-const { drawnUser } = storeToRefs(christmassStore)
-const { draw, getDrawnUser } = christmassStore
+const LoteryStore = useLoteryStore()
+const { drawnUser } = storeToRefs(LoteryStore)
+const { draw, getDrawnUser } = LoteryStore
 
 onMounted(() => {
   getDrawnUser()

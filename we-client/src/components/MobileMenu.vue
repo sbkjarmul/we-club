@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import * as content from '@/assets/content.json'
 import { NickNames } from '@/enum/nick-name.enum';
-import { useUserStore } from '@/stores/UserStore';
+import { useUserStore } from '@/stores/userStore';
 import { storeToRefs } from 'pinia';
 import { computed } from 'vue';
 import { useRouter } from "vue-router";

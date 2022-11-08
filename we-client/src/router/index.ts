@@ -3,7 +3,7 @@ import Home from '@/pages/Home.vue'
 import Login from '@/pages/Login.vue'
 import Dashboard from '@/pages/Home/Dashboard.vue'
 import Xmassboard from '@/pages/Home/Xmassboard.vue'
-import { useUserStore } from '@/stores/UserStore'
+import { useUserStore } from '@/stores/userStore'
 
 const routes = [
   {

@@ -6,7 +6,7 @@ export enum NickNames {
   MATI = 'ZielonyKapelusz',
   MARCIN = 'Makflar',
   RAFCIO = 'Rafcio byk',
-  CICHY = 'Głośny',
+  CICHY = 'Cichy',
   PITER = 'Rep tera',
   OZIA = 'Ozia',
   KRYCHA = 'Yungkubek'

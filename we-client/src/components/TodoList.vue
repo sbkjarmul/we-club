@@ -2,18 +2,20 @@
 import * as content from '@/assets/content.json'
 import TodoItem from '@/components/TodoItem.vue'
 import { Todo } from '@/models/todo.model'
-import { useChristmassStore } from '@/stores/ChristmassStore';
-import { useUserStore } from '@/stores/UserStore';
+import { useLoteryStore } from '@/stores/loteryStore';
+import { useTodoStore } from '@/stores/todoStore';
+import { useUserStore } from '@/stores/userStore';
 import { storeToRefs } from 'pinia';
 import { onMounted, ref } from 'vue';
 
 const todoListContent = content.components.todo
 
-const christmassStore = useChristmassStore()
+const LoteryStore = useLoteryStore()
+const todoStore = useTodoStore()
 const userStore = useUserStore()
-const { allTodos } = storeToRefs(christmassStore)
+const { allTodos } = storeToRefs(todoStore)
 const { user } = storeToRefs(userStore)
-const { assignTodo, unassignTodo, addTodo, removeTodo, getAllTodos } = christmassStore
+const { assignTodo, unassignTodo, addTodo, removeTodo, getAllTodos } = todoStore
 
 onMounted(() => {
   getAllTodos()

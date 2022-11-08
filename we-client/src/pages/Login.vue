@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useUserStore } from '@/stores/UserStore';
+import { useUserStore } from '@/stores/userStore';
 import * as content from '@/assets/content.json'
 import { WeMember } from '@/models/we-member.model';
 import { ref } from 'vue';

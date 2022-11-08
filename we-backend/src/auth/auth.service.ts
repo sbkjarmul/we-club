@@ -47,7 +47,7 @@ const WE_MEMBERS = [
     hash: '$argon2id$v=19$m=65536,t=3,p=4$IwXlKXXsmlfRJNCGjlStJA$lVGdhImKh6r8BkjhxF5WEipGRUCmQmvw6t0lQAPn6ac',
     firstName: 'Kamil',
     lastName: 'Swieca',
-    nickName: 'Głośny',
+    nickName: 'Cichy',
   },
   {
     email: 'krystianjarmul.kj@gmail.com',

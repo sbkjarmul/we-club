@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import * as content from '@/assets/content.json'
-import { useUserStore } from '@/stores/UserStore';
+import { useUserStore } from '@/stores/userStore';
 import { useRouter } from "vue-router";
 
 const emit = defineEmits(['toggleMobileMenu'])
