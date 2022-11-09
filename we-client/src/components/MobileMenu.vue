@@ -128,7 +128,7 @@ const classObject = computed(() => ({
   align-items: center;
   flex-direction: column;
 
-  margin-bottom: $space-l;
+  margin-bottom: $space-m;
 }
 
 .menu__logout {
