@@ -145,11 +145,6 @@ function handleLoteryResultClicked() {
   }
 }
 
-.lotery__picture {
-  width: 200px;
-  margin: $space-xs;
-}
-
 .lotery__clickable {
   cursor: pointer;
 }
@@ -163,11 +158,11 @@ function handleLoteryResultClicked() {
 
 .lotery__image {
   @include for-mobile {
-    min-width: 100px;
+    width: 100px;
+    height: 80px;
   }
 
-  width: 50%;
-  max-width: 200px;
-  user-select: none;
+  width: 200px;
+  height: 160px;
 }
 </style>
