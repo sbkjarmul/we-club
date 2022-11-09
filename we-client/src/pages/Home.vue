@@ -56,5 +56,6 @@ function unblockScroll() {
   background-color: $color-dark-hover;
   padding-bottom: $space-s;
   min-height: (max(100vh - $headerHeight));
+  height: fit-content;
 }
 </style>
