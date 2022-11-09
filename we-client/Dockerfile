@@ -2,8 +2,6 @@ FROM node:lts as builder
 
 WORKDIR /app
 
-ENV VITE_BASE_URL=http://3.83.191.5/api
-
 COPY package*.json ./
 
 RUN npm install
