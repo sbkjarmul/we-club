@@ -28,7 +28,7 @@ services:
       dockerfile: Dockerfile
       context: ./we-client
     env_file:
-      - .env.production
+      - ./we-client/.env.production
     environment:
       - VITE_BASE_URL=http://3.83.191.5/api
     ports:
