@@ -43,7 +43,7 @@ function handleLogin() {
           {{ loginContent.logIn }}
         </button>
 
-        <span class="login__error" v-show="loginError">Podales zle passy... Skup sie byku!</span>
+        <span class="login__error" v-show="loginError">{{ loginContent.loginError }}</span>
       </div>
     </div>
   </section>
@@ -94,6 +94,7 @@ function handleLogin() {
     box-shadow: none;
     backdrop-filter: none;
     padding-bottom: $space-m;
+    height: 100vh;
   }
 }
 

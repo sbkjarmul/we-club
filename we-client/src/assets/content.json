@@ -19,7 +19,8 @@
       "home": "Glowna"
     },
     "login": {
-      "logIn": "Zaloguj sie"
+      "logIn": "Zaloguj sie",
+      "loginError": "Podales zle passy... Skup sie byku!"
     },
     "todo": {
       "assigned": "Przypisany: ",
